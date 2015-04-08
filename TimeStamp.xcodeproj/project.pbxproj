@@ -14,6 +14,7 @@
 		63B2ACE31AD4F9E50020E5D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B2ACE21AD4F9E50020E5D2 /* Images.xcassets */; };
 		63B2ACE61AD4F9E50020E5D2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B2ACE41AD4F9E50020E5D2 /* LaunchScreen.xib */; };
 		63B2ACF21AD4F9E50020E5D2 /* TimeStampTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2ACF11AD4F9E50020E5D2 /* TimeStampTests.m */; };
+		63B2ACFC1AD519930020E5D2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B2ACFB1AD519930020E5D2 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		63B2ACEB1AD4F9E50020E5D2 /* TimeStampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeStampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B2ACF01AD4F9E50020E5D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B2ACF11AD4F9E50020E5D2 /* TimeStampTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeStampTests.m; sourceTree = "<group>"; };
+		63B2ACFB1AD519930020E5D2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B2ACFC1AD519930020E5D2 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		63B2ACC91AD4F9E50020E5D2 = {
 			isa = PBXGroup;
 			children = (
+				63B2ACFB1AD519930020E5D2 /* MobileCoreServices.framework */,
 				63B2ACD41AD4F9E50020E5D2 /* TimeStamp */,
 				63B2ACEE1AD4F9E50020E5D2 /* TimeStampTests */,
 				63B2ACD31AD4F9E50020E5D2 /* Products */,
@@ -344,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TimeStamp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TimeStamp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
