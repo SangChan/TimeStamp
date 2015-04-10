@@ -359,12 +359,13 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
         faceRect.origin.x = faceRect.origin.y;
         faceRect.origin.y = temp;
         
-        if (self.videoDeviceInput.device.position == AVCaptureDevicePositionFront) {
-            faceRect = CGRectMake(self.previewView.bounds.size.width - faceRect.origin.x + faceRect.size.width , faceRect.origin.y , -faceRect.size.width, faceRect.size.height);
-        }
         
         CGFloat widthScaleBy = self.previewView.bounds.size.width / ciImage.extent.size.height;
         CGFloat heightScaleBy = self.previewView.bounds.size.height / ciImage.extent.size.width;
+        
+        if (self.videoDeviceInput.device.position == AVCaptureDevicePositionFront) {
+            faceRect = CGRectMake(self.previewView.bounds.size.width - faceRect.origin.x + faceRect.size.width , faceRect.origin.y , -faceRect.size.width, faceRect.size.height);
+        }
         
         faceRect.size.width *= widthScaleBy;
         faceRect.size.height *= heightScaleBy;
