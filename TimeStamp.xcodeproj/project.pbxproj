@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63AFA68E1AD79B4A00C486AA /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AFA68D1AD79B4A00C486AA /* AVCamPreviewView.m */; };
+		63AFA6901AD7A59900C486AA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AFA68F1AD7A59900C486AA /* AssetsLibrary.framework */; };
 		63B2ACD81AD4F9E50020E5D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2ACD71AD4F9E50020E5D2 /* main.m */; };
 		63B2ACDB1AD4F9E50020E5D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2ACDA1AD4F9E50020E5D2 /* AppDelegate.m */; };
 		63B2ACDE1AD4F9E50020E5D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2ACDD1AD4F9E50020E5D2 /* ViewController.m */; };
@@ -15,6 +17,9 @@
 		63B2ACE61AD4F9E50020E5D2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B2ACE41AD4F9E50020E5D2 /* LaunchScreen.xib */; };
 		63B2ACF21AD4F9E50020E5D2 /* TimeStampTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2ACF11AD4F9E50020E5D2 /* TimeStampTests.m */; };
 		63B2ACFC1AD519930020E5D2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B2ACFB1AD519930020E5D2 /* MobileCoreServices.framework */; };
+		63B2ACFF1AD526DC0020E5D2 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B2ACFE1AD526DC0020E5D2 /* CameraViewController.m */; };
+		63B2AD011AD526FB0020E5D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B2AD001AD526FB0020E5D2 /* CoreGraphics.framework */; };
+		63B2AD031AD527040020E5D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B2AD021AD527040020E5D2 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63AFA68C1AD79B4A00C486AA /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVCamPreviewView.h; path = AVCam/AVCamPreviewView.h; sourceTree = "<group>"; };
+		63AFA68D1AD79B4A00C486AA /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCamPreviewView.m; path = AVCam/AVCamPreviewView.m; sourceTree = "<group>"; };
+		63AFA68F1AD7A59900C486AA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		63B2ACD21AD4F9E50020E5D2 /* TimeStamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeStamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B2ACD61AD4F9E50020E5D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B2ACD71AD4F9E50020E5D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +50,10 @@
 		63B2ACF01AD4F9E50020E5D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B2ACF11AD4F9E50020E5D2 /* TimeStampTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeStampTests.m; sourceTree = "<group>"; };
 		63B2ACFB1AD519930020E5D2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		63B2ACFD1AD526DC0020E5D2 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		63B2ACFE1AD526DC0020E5D2 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		63B2AD001AD526FB0020E5D2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63B2AD021AD527040020E5D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63AFA6901AD7A59900C486AA /* AssetsLibrary.framework in Frameworks */,
+				63B2AD031AD527040020E5D2 /* AVFoundation.framework in Frameworks */,
+				63B2AD011AD526FB0020E5D2 /* CoreGraphics.framework in Frameworks */,
 				63B2ACFC1AD519930020E5D2 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,9 +78,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63AFA68B1AD79B1800C486AA /* AVCam */ = {
+			isa = PBXGroup;
+			children = (
+				63AFA68C1AD79B4A00C486AA /* AVCamPreviewView.h */,
+				63AFA68D1AD79B4A00C486AA /* AVCamPreviewView.m */,
+			);
+			name = AVCam;
+			sourceTree = "<group>";
+		};
 		63B2ACC91AD4F9E50020E5D2 = {
 			isa = PBXGroup;
 			children = (
+				63AFA68F1AD7A59900C486AA /* AssetsLibrary.framework */,
+				63B2AD021AD527040020E5D2 /* AVFoundation.framework */,
+				63B2AD001AD526FB0020E5D2 /* CoreGraphics.framework */,
 				63B2ACFB1AD519930020E5D2 /* MobileCoreServices.framework */,
 				63B2ACD41AD4F9E50020E5D2 /* TimeStamp */,
 				63B2ACEE1AD4F9E50020E5D2 /* TimeStampTests */,
@@ -85,6 +112,7 @@
 		63B2ACD41AD4F9E50020E5D2 /* TimeStamp */ = {
 			isa = PBXGroup;
 			children = (
+				63AFA68B1AD79B1800C486AA /* AVCam */,
 				63B2ACD91AD4F9E50020E5D2 /* AppDelegate.h */,
 				63B2ACDA1AD4F9E50020E5D2 /* AppDelegate.m */,
 				63B2ACDC1AD4F9E50020E5D2 /* ViewController.h */,
@@ -93,6 +121,8 @@
 				63B2ACE21AD4F9E50020E5D2 /* Images.xcassets */,
 				63B2ACE41AD4F9E50020E5D2 /* LaunchScreen.xib */,
 				63B2ACD51AD4F9E50020E5D2 /* Supporting Files */,
+				63B2ACFD1AD526DC0020E5D2 /* CameraViewController.h */,
+				63B2ACFE1AD526DC0020E5D2 /* CameraViewController.m */,
 			);
 			path = TimeStamp;
 			sourceTree = "<group>";
@@ -224,8 +254,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				63B2ACDE1AD4F9E50020E5D2 /* ViewController.m in Sources */,
+				63B2ACFF1AD526DC0020E5D2 /* CameraViewController.m in Sources */,
 				63B2ACDB1AD4F9E50020E5D2 /* AppDelegate.m in Sources */,
 				63B2ACD81AD4F9E50020E5D2 /* main.m in Sources */,
+				63AFA68E1AD79B4A00C486AA /* AVCamPreviewView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +450,7 @@
 				63B2ACF71AD4F9E50020E5D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63B2ACF81AD4F9E50020E5D2 /* Build configuration list for PBXNativeTarget "TimeStampTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +459,7 @@
 				63B2ACFA1AD4F9E50020E5D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,6 +22,7 @@
                                     <barButtonItem title="Shoot" id="jAS-VU-ltq">
                                         <connections>
                                             <action selector="useCamera:" destination="vXZ-lx-hvc" id="gYh-ct-p2l"/>
+                                            <segue destination="0X3-eq-tS6" kind="show" id="CF4-JX-j2Y"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="OpenRoll" id="pXi-Z8-Yo7">
@@ -46,6 +47,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="294" y="321"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="0Hi-x2-Qsa">
+            <objects>
+                <viewController id="0X3-eq-tS6" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WED-qz-VCw"/>
+                        <viewControllerLayoutGuide type="bottom" id="v9y-cO-HfG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EfE-P4-bMC" customClass="AVCamPreviewView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIQ-Iv-2Fc">
+                                <rect key="frame" x="16" y="530" width="50" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleMovieRecording:" destination="0X3-eq-tS6" eventType="touchUpInside" id="leQ-4w-8HI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-cW-h5b">
+                                <rect key="frame" x="258" y="530" width="46" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Snap">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="snapStillImage:" destination="0X3-eq-tS6" eventType="touchUpInside" id="ozp-J7-axf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqX-oF-EQI">
+                                <rect key="frame" x="133" y="530" width="54" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeCamera:" destination="0X3-eq-tS6" eventType="touchUpInside" id="Fzg-8C-Tka"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KlV-Pl-MsS" appends="YES" id="htA-SR-kvn"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="vqX-oF-EQI" id="38W-SO-cMi"/>
+                        <outlet property="previewView" destination="EfE-P4-bMC" id="cc7-ah-3Bq"/>
+                        <outlet property="recordButton" destination="kIQ-Iv-2Fc" id="LMY-dU-tuM"/>
+                        <outlet property="stillButton" destination="WzC-cW-h5b" id="VlT-W6-Ws3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJt-XZ-xcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KlV-Pl-MsS">
+                    <connections>
+                        <action selector="focusAndExposeTap:" destination="0X3-eq-tS6" id="F8J-ob-mSS"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="763" y="321"/>
         </scene>
     </scenes>
 </document>
