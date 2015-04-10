@@ -60,16 +60,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIQ-Iv-2Fc">
-                                <rect key="frame" x="16" y="530" width="50" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <state key="normal" title="Record">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleMovieRecording:" destination="0X3-eq-tS6" eventType="touchUpInside" id="leQ-4w-8HI"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-cW-h5b">
                                 <rect key="frame" x="258" y="530" width="46" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -81,7 +71,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqX-oF-EQI">
-                                <rect key="frame" x="133" y="530" width="54" height="30"/>
+                                <rect key="frame" x="16" y="530" width="54" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <state key="normal" title="Change">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,9 +89,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="cameraButton" destination="vqX-oF-EQI" id="38W-SO-cMi"/>
+                        <outlet property="changeCameraButton" destination="vqX-oF-EQI" id="lfQ-Kv-Ya8"/>
                         <outlet property="previewView" destination="EfE-P4-bMC" id="cc7-ah-3Bq"/>
-                        <outlet property="recordButton" destination="kIQ-Iv-2Fc" id="LMY-dU-tuM"/>
                         <outlet property="stillButton" destination="WzC-cW-h5b" id="VlT-W6-Ws3"/>
                     </connections>
                 </viewController>

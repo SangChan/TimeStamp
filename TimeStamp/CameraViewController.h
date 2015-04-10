@@ -11,24 +11,26 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface CameraViewController : UIViewController  <AVCaptureFileOutputRecordingDelegate>
+@interface CameraViewController : UIViewController  <AVCaptureFileOutputRecordingDelegate,AVCaptureAudioDataOutputSampleBufferDelegate>
 
 // For use in the storyboards.
 @property (nonatomic, weak) IBOutlet AVCamPreviewView *previewView;
-@property (nonatomic, weak) IBOutlet UIButton *recordButton;
-@property (nonatomic, weak) IBOutlet UIButton *cameraButton;
+@property (nonatomic, weak) IBOutlet UIButton *changeCameraButton;
 @property (nonatomic, weak) IBOutlet UIButton *stillButton;
 
-- (IBAction)toggleMovieRecording:(id)sender;
 - (IBAction)changeCamera:(id)sender;
 - (IBAction)snapStillImage:(id)sender;
 - (IBAction)focusAndExposeTap:(UIGestureRecognizer *)gestureRecognizer;
+
+// Face Detect.
+@property (nonatomic) dispatch_queue_t faceDetectQueue; // Communicate with the session and other session objects on this queue.
+@property (nonatomic) CIDetector *faceDetector;
 
 // Session management.
 @property (nonatomic) dispatch_queue_t sessionQueue; // Communicate with the session and other session objects on this queue.
 @property (nonatomic) AVCaptureSession *session;
 @property (nonatomic) AVCaptureDeviceInput *videoDeviceInput;
-@property (nonatomic) AVCaptureMovieFileOutput *movieFileOutput;
+@property (nonatomic)AVCaptureVideoDataOutput *frameOutput;
 @property (nonatomic) AVCaptureStillImageOutput *stillImageOutput;
 
 // Utilities.
