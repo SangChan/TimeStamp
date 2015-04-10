@@ -130,6 +130,11 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
         
         [[self session] startRunning];
     });
+    
+    _faceView = [[UIView alloc]initWithFrame:self.previewView.bounds];
+    [_faceView setBackgroundColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.3]];
+    [self.previewView addSubview:_faceView];
+    [_faceView setHidden:YES];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -345,7 +350,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
     
     BOOL faceFound = NO;
     for (CIFaceFeature *face in features) {
-        //NSLog(@"%@",[face description]);
+        NSLog(@"%@",[face description]);
         
         CGRect faceRect = [face bounds];
         CGFloat temp = faceRect.size.width;
@@ -364,9 +369,14 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
         faceRect.origin.y *= heightScaleBy;
         
         
-        NSLog(@"face x = %f, y = %f, w = %f , h = %f",face.bounds.origin.x,face.bounds.origin.y
-              ,face.bounds.size.width,face.bounds.size.height);
+        NSLog(@"face x = %f, y = %f, w = %f , h = %f",faceRect.origin.x,faceRect.origin.y
+              ,faceRect.size.width,faceRect.size.height);
         
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_faceView setHidden:NO];
+            [_faceView setFrame:faceRect];
+        });
         
         if (face.hasTrackingID) {
             NSLog(@"tracking ID = %d",face.trackingID);

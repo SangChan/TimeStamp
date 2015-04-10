@@ -11,7 +11,9 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface CameraViewController : UIViewController  <AVCaptureFileOutputRecordingDelegate,AVCaptureAudioDataOutputSampleBufferDelegate>
+@interface CameraViewController : UIViewController  <AVCaptureFileOutputRecordingDelegate,AVCaptureAudioDataOutputSampleBufferDelegate> {
+    UIView *_faceView;
+}
 
 // For use in the storyboards.
 @property (nonatomic, weak) IBOutlet AVCamPreviewView *previewView;
