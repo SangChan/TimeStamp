@@ -350,7 +350,6 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
     
     BOOL faceFound = NO;
     for (CIFaceFeature *face in features) {
-        NSLog(@"%@",[face description]);
         
         CGRect faceRect = [face bounds];
         CGFloat temp = faceRect.size.width;
@@ -359,6 +358,10 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
         temp = faceRect.origin.x;
         faceRect.origin.x = faceRect.origin.y;
         faceRect.origin.y = temp;
+        
+        if (self.videoDeviceInput.device.position == AVCaptureDevicePositionFront) {
+            faceRect = CGRectMake(self.previewView.bounds.size.width - faceRect.origin.x + faceRect.size.width , faceRect.origin.y , -faceRect.size.width, faceRect.size.height);
+        }
         
         CGFloat widthScaleBy = self.previewView.bounds.size.width / ciImage.extent.size.height;
         CGFloat heightScaleBy = self.previewView.bounds.size.height / ciImage.extent.size.width;
