@@ -90,10 +90,6 @@
 		63B2ACC91AD4F9E50020E5D2 = {
 			isa = PBXGroup;
 			children = (
-				63AFA68F1AD7A59900C486AA /* AssetsLibrary.framework */,
-				63B2AD021AD527040020E5D2 /* AVFoundation.framework */,
-				63B2AD001AD526FB0020E5D2 /* CoreGraphics.framework */,
-				63B2ACFB1AD519930020E5D2 /* MobileCoreServices.framework */,
 				63B2ACD41AD4F9E50020E5D2 /* TimeStamp */,
 				63B2ACEE1AD4F9E50020E5D2 /* TimeStampTests */,
 				63B2ACD31AD4F9E50020E5D2 /* Products */,
@@ -130,6 +126,10 @@
 		63B2ACD51AD4F9E50020E5D2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				63AFA68F1AD7A59900C486AA /* AssetsLibrary.framework */,
+				63B2AD021AD527040020E5D2 /* AVFoundation.framework */,
+				63B2AD001AD526FB0020E5D2 /* CoreGraphics.framework */,
+				63B2ACFB1AD519930020E5D2 /* MobileCoreServices.framework */,
 				63B2ACD61AD4F9E50020E5D2 /* Info.plist */,
 				63B2ACD71AD4F9E50020E5D2 /* main.m */,
 			);
